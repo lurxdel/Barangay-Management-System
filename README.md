@@ -14,8 +14,13 @@ This system was developed as part of our coursework to fulfill partial requireme
 - **User Role & Security** – implement role-based access control for officials, staff, and residents.
 
 
+### Unofficial Sceenshot
 ![Home](https://github.com/user-attachments/assets/51562da9-1946-44b3-b7c6-748bd6e635e2)
 
+> **Note:**  
+> - Due to system being under development, the features might get an update in the future.
+> - Some features may not function as intended, and the site might experience occasional crashes.
+     
 
 ### Acknowledgment  
 We are grateful to our instructors for their guidance and support throughout the development of this project. This work reflects our learning journey and the collaborative efforts of the team.  
