@@ -37,6 +37,6 @@ If you like my work or find it helpful, you can support me by:
 
 
 ## Disclaimer  
-We do not own the images, names, or references included in this project are used purely as placeholders and do not represent actual individuals, organizations, or entities.
+We do not own the images, names, or references included in this project are used purely as placeholders.
 
 All trademarks, service marks, trade names, and other intellectual property rights belong to their respective owners.  
