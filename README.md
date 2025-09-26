@@ -22,6 +22,6 @@ If you like my work or find it helpful, you can support me by:
 ![Collaborate](https://img.shields.io/badge/Collaborate-6CC24A?style=for-the-badge&logo=githubactions&logoColor=white)
 
 ## Disclaimer  
-I do not own the images, names, or any other content used in this project.  
+We do not own the images, names, or references included in this project are used purely as placeholders and do not represent actual individuals, organizations, or entities.
 
 All trademarks, service marks, trade names, and other intellectual property rights belong to their respective owners.  
