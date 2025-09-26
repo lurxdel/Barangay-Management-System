@@ -1,10 +1,12 @@
 # Barangay Management System
+A digital system designed to streamline barangay operations, ensuring efficient management of records, services, and community transactions
+
+<p align="center">
+  <img width="200" alt="Image" src="https://github.com/user-attachments/assets/b272a4e4-dd3e-4f4d-8b19-aef8764f1535" />
+</p>
+
 ## Project Overview  
 The **Barangay Management System (BMS)** is a software project developed to provide a centralized platform for managing barangay records, transactions, and services. It focuses on improving efficiency, transparency, and accessibility of barangay operations through digital solutions.
-
-
-### Purpose  
-This system was developed as part of our coursework to fulfill partial requirements for a subject in school. The goal was to gain practical experience in the end-to-end software development process such as applying agile methodologies, and addressing real-world system requirements while creating a project that mirrors professional development practices.
 
 
 ### Features  
