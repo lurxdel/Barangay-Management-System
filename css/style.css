@@ -1,0 +1,265 @@
+/* Styling Sheet for the Front Page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2c2c2c;
+    padding: 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    color: #FD8129;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("../assets/img/barangay-gusa.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+/* Card Section */
+.card-custom {            
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-custom:hover {
+    transform: scale(1.05);
+}
+
+.announcement-card img {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Banner / Header */
+.header-banner {
+    background: rgba(0, 100, 0, 0.85) url("../assets/img/header-bg.jpg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.header-banner h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.header-banner p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+/* Registration Form */
+.registration-form {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.registration-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.registration-form input,
+.registration-form textarea,
+.registration-form select {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.registration-form button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: #1e6f1e;
+}
+
+.registration-form .note {
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+}
+
+.registration-form a {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #0c8c3a;
+  text-decoration: none;
+}
+
+.registration-form a:hover {
+  text-decoration: underline;
+}
+
+/* Calendar Section */
+.calendar-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.calendar-header button {
+  background: #228B22;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.calendar-header button:hover {
+  background: #1e6f1e;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.calendar-day {
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.calendar-day:hover {
+  transform: scale(1.05);
+  background: #d6f5d6;
+}
+
+.calendar-day.today {
+  background: #228B22;
+  color: white;
+  font-weight: bold;
+}
+
+.calendar-day.event {
+  background: #ffe8cc;
+  border: 1px solid #ff8800;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 2px solid #FD8129;
+    display: inline-block;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 6px 0;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
