@@ -12,17 +12,18 @@
 
 <?php include 'includes/nav.php'; ?>
 
-    <section class="header-banner">
-        <div class="overlay">
-        <h1>Barangay Contact</h1>
+    <section class="header-banner" style="display: flex; align-items: center; justify-content: center;">
+        <div class="overlay"style="display: flex; align-items: center; gap: 20px;">
+        <h1>Barangay</h1>
+        <h3>Contact</h3>
         </div>
     </section>
 
     <section class="registration-form">
-        <h2>GET IN TOUCH WITH US</h2>
+        <h2 style="font-size: 22px; margin-bottom: 30px;">GET IN TOUCH WITH US</h2>
         
         <!-- Contact Details -->
-        <div class="contact-details mb-4">
+        <div class="contact-details mb-4" style="display: flex; flex-direction: column; gap: 0px; margin-bottom: 20px;">
         <p><strong>Barangay Address:</strong> Barangay Gusa, Cagayan de Oro City</p>
         <p><strong>Email:</strong> info@brgygusacdo.com</p>
         <p><strong>Phone:</strong> 0909-000-0000</p>
@@ -30,7 +31,7 @@
         </div>
 
         <!-- Complaint Form -->
-        <h4>Send Us Your Complaint or Concern</h4>
+        <h4 style="font-size: 16px; margin-bottom: 14px; font-weight: 600;">Send Us Your Complaint or Concern</h4>
         <form action="backend/complaint_process.php" method="POST">
         
         <div class="form-row">

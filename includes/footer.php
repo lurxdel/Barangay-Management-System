@@ -19,7 +19,7 @@
       </ul>
     </div>
 
-    <div class="footer-links">
+    <div class="footer-links" style = "font-size: 14px;">
       <h4>Contact Us</h4>
       <p>Barangay Gusa, Cagayan de Oro City, Philippines<br>
          0909-000-0000<br>

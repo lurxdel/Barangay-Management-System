@@ -15,7 +15,20 @@ body {
 .navbar a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FD8129;
+    position: relative;
+    right:80px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #FD8129;
+    font-weight: bold;
 }
 
 .navbar a:hover {
@@ -60,16 +73,27 @@ body {
 
 /* Banner / Header */
 .header-banner {
-    background: rgba(0, 100, 0, 0.85) url("../assets/img/header-bg.jpg") no-repeat center center;
+    background: rgba(0, 100, 0, 0.85) url("../assets/img/barangay-gusa.jpg") no-repeat center center;
     background-size: cover;
     color: white;
-    padding: 60px 20px;
+    padding: 90px 20px;
     text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 
 .header-banner h1 {
-    margin: 0;
-    font-size: 36px;
+    color: white; 
+    margin: 0; 
+    font-weight: bold;
+}
+
+.header-banner h3 {
+    color: #66B761; 
+    font-weight: bold; 
+    margin: 0; 
+    font-size: 38px;
 }
 
 .header-banner p {
@@ -219,8 +243,8 @@ body {
 footer {
     background: #111;
     color: #fff;
-    padding: 40px 20px;
-    margin-top: 50px;
+    padding: 10px 40px;
+    margin-top: 80px;
 }
 
 .footer-container {
@@ -228,6 +252,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
+    margin-top: 20px;
 }
 
 .footer-links h4 {
