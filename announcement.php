@@ -13,10 +13,10 @@
 <?php include 'includes/nav.php'; ?>
 
     <section class="header-banner" style="display: flex; align-items: center; justify-content: center;">
-    <div class="overlay" style="display: flex; align-items: center; gap: 20px;">
-        <h1>Barangay</h1>
-        <h3>Announcements</h3>
-    </div>
+            <div class="overlay" style="display: flex; align-items: center; gap: 20px;">
+                <h1>Barangay</h1>
+                <h3>Announcements</h3>
+            </div>
     </section>
 
     <section class="py-5 bg-light">
