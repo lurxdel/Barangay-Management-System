@@ -13,7 +13,7 @@
 <?php include 'includes/nav.php'; ?>
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" style="display: flex; align-items: center; justify-content: center;">
     <h5>WELCOME TO</h5>
     <h1 class="fw-bold">BARANGAY <span class="text-success">GUSA</span></h1>
     <p>Gusa, Cagayan de Oro City</p>

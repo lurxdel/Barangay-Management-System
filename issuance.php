@@ -12,9 +12,10 @@
 
 <?php include 'includes/nav.php'; ?>
 
-  <section class="header-banner">
-    <div class="overlay">
-      <h1>Barangay Issuance</h1>
+  <section class="header-banner" style="display: flex; align-items: center; justify-content: center;">
+      <div class="overlay" style="display: flex; align-items: center; gap: 20px;">
+      <h1>Barangay</h1> 
+      <h3>Issuance</h3>
     </div>
   </section>
 

@@ -1,18 +1,23 @@
-<?php
-session_start();
-require_once 'config.php';
+<?php 
+session_start(); 
+require_once 'config.php'; 
 
 // ...existing code...
+
 // Retrieve and sanitize form data
 $email = trim($_POST['email'] ?? '');
 $password = $_POST['password'] ?? '';
-$role = $_POST['role'] ?? ''; // only for admin_login.php
+
+// If a role is posted (admin form), it will be used. Absence => resident form.
+$postedRole = trim($_POST['role'] ?? '');
+$isResidentForm = $postedRole === '';
 
 // Basic validation
 if (empty($email) || empty($password)) {
     echo "<script>alert('Email and password are required'); window.history.back();</script>";
     exit();
 }
+
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "<script>alert('Invalid email format'); window.history.back();</script>";
     exit();
@@ -21,44 +26,55 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // Find the user by email
 $user = $usersCollection->findOne(['email' => $email]);
 
-if ($user) {
-    // Prepare stored password
-    $stored = isset($user['password']) ? (string)$user['password'] : '';
-
-    if ($stored === '') {
-        echo "<script>alert('Account has no password set'); window.history.back();</script>";
-        exit();
-    }
-
-    // Verify password
-    $verified = password_verify($password, $stored);
-
-    if ($verified) {
-        // Optional: match role (if admin)
-        if (!empty($role) && isset($user['role']) && $user['role'] !== $role) {
-            echo "<script>alert('Invalid role'); window.history.back();</script>";
-            exit();
-        }
-
-        // Regenerate session id and store session
-        session_regenerate_id(true);
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['role'] = $user['role'] ?? 'User';
-
-        // Redirect based on role
-        if (isset($user['role']) && $user['role'] === 'Barangay Captain') {
-            header("Location: ../pages/admin/admin_dashboard.php");
-        } else {
-            header("Location: ../user_dashboard.php");
-        }
-        exit();
-    } else {
-        echo "<script>alert('Incorrect password'); window.history.back();</script>";
-        exit();
-    }
-} else {
+if (!$user) {
     echo "<script>alert('User not found'); window.history.back();</script>";
     exit();
 }
+
+// Prepare stored password
+$stored = isset($user['password']) ? (string)$user['password'] : '';
+
+if ($stored === '') {
+    echo "<script>alert('Account has no password set'); window.history.back();</script>";
+    exit();
+}
+
+// Verify password
+if (!password_verify($password, $stored)) {
+    echo "<script>alert('Incorrect password'); window.history.back();</script>";
+    exit();
+}
+
+// Enforce form-specific role rules:
+// - If resident form (no role posted), prevent Barangay Staff from logging in here.
+// - If a role is posted (admin form), require the user's role to match.
+$userRole = isset($user['role']) ? $user['role'] : 'Resident';
+
+if ($isResidentForm) {
+    if ($userRole === 'Barangay Staff') {
+        echo "<script>alert('Invalid role for this login form. Use Administrator Login.'); window.location.href='../user_login.php';</script>";
+        exit();
+    }
+} else {
+    // Role posted (admin form)
+    if ($postedRole !== '' && $userRole !== $postedRole) {
+        echo "<script>alert('Invalid role for this account'); window.history.back();</script>";
+        exit();
+    }
+}
+
+// Successful login: regenerate session id and set session
+session_regenerate_id(true);
+$_SESSION['email'] = $user['email'];
+$_SESSION['role'] = $userRole;
+
+// Redirect based on role
+if ($userRole === 'Barangay Staff') {
+    header("Location: ../pages/admin/admin_dashboard.php");
+} else {
+    header("Location: ../user_dashboard.php");
+}
+exit();
+
 // ...existing code...
 ?>

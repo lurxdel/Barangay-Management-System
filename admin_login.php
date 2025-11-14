@@ -18,7 +18,7 @@
     <form action="backend/login_process.php" method="POST">
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="password" name="password" placeholder="Your Password" required>
-      <input type="hidden" name="role" value="Barangay Captain">
+      <input type="hidden" name="role" value="Barangay Staff">
 
       <label><input type="checkbox" name="remember"> Remember me</label>
       <a href="user_login.php" class="alt-login">Resident Login</a>
