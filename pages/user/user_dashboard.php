@@ -45,6 +45,7 @@ if (!isset($_SESSION['email'])) {
 <div style="width:100%">
 
     <div class="header">
+        <div class="hamburger" onclick="toggleSidebar()">☰</div>
         <h1 class="header-title">RESIDENT <span class="green">DASHBOARD</span></h1>
 
         <div class="header-logos">
@@ -104,8 +105,13 @@ if (!isset($_SESSION['email'])) {
 
 </div>
 
-<script src="../assets/js/calendar.js"></script>
+<script src="../../assets/js/calendar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('active');
+}
+</script>
 
 </body>
 </html>

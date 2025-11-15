@@ -1,242 +1,466 @@
-/* Reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    body { background: #f3f6f5; min-height: 100vh; display: flex; }
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+body, html { overflow-x: hidden;}
+body { background: #f3f6f5; min-height: 100vh; display: flex; }
 
-    .sidebar {
-      width: 260px;
-      background: #ffffff;
-      min-height: 100vh;
-      border-right: 1px solid #e6e6e6;
-      display: flex;
-      flex-direction: column;
-    }
-    .sidebar-header {
-      background: linear-gradient(90deg,#2E9F43,#7ed957);
-      padding: 18px;
-      height: 100px;
-      color: #fff;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-    .sidebar-header img { 
-        width:48px; 
-        height:48px; 
-        border-radius:50%; 
-        object-fit:cover; 
-        border:2px solid rgba(255,255,255,0.18); 
+/* ---------- SIDEBAR (DESKTOP) ---------- */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  min-height: 100vh;
+  border-right: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar-header {
+  background: linear-gradient(90deg,#2E9F43,#7ed957);
+  padding: 18px;
+  height: 100px;
+  color: #fff;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sidebar-header img { 
+  width:48px; height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(255,255,255,0.18);
+}
+
+.sidebar-header h3 { font-size:14px; font-weight:700; line-height:1; }
+.sidebar-header small { font-size:11px; opacity:0.95; display:block; }
+
+.sidebar-menu { margin-top: 10px; display:flex; flex-direction:column; }
+.sidebar-menu a {
+  padding:12px 18px;
+  color:#222;
+  text-decoration:none;
+  border-bottom:1px solid #f0f0f0;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:14px;
+}
+
+.sidebar-menu a.active {
+  background:#f0f6f1;
+  font-weight:700;
+  color:#12581f;
+}
+
+.sidebar-bottom {
+  margin-top:auto;
+  padding:12px 18px;
+  border-top:1px solid #f0f0f0;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.sidebar-bottom button {
+  border:none;
+  background:none;
+  color:#222;
+  cursor:pointer;
+  padding:8px 12px;
+  border-radius:6px;
+}
+
+.sidebar-bottom .small-text { font-size:12px; color:#666; }
+
+/* ---------- HAMBURGER MENU (MOBILE) ---------- */
+.hamburger {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+/* ---------- MAIN ---------- */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 100px;
+  background-image: url('../assets/img/barangay-gusa.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: relative;
+}
+
+.header-title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 36px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.55);
+  letter-spacing: 1px;
+  margin-top: 50px;
+}
+
+.header-title .green { color:#2E9F43; }
+
+.header-logos { display:flex; gap:12px; align-items:center; }
+.header-logos img { width:64px; height:64px; object-fit:contain; }
+
+.content { padding: 40px; width: 100%; }
+
+/* ---------- GRID ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 350px auto;
+  gap: 80px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background: white;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.card p { font-size: 12px; }
+
+.profile-pic {
+  width: 160px;
+  height: 200px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.update-btn {
+  background: #2e8b57;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+}
+
+/* ---------- CALENDAR ---------- */
+.calendar-container {
+  background: white;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.calendar-header button {
+  background: #2E9F43;
+  color: white;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-day {
+  background: #efefef;
+  padding: 5px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: #444;
+}
+
+.today {
+  background: #c1f2c7 !important;
+  border: 2px solid #2E9F43;
+}
+
+/* ---------- RIGHT COLUMN ---------- */
+
+.top-info {
+    display: flex;
+    gap: 44px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.left-column {
+    flex-grow: 1.7;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stats-boxes {
+    display: flex;
+    gap: 20px;
+}
+
+.stats-box {
+    flex: 1;
+    background: #2e9f43;
+    padding: 18px 34px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+    font-size: 27px;
+    box-shadow: 0 5px 15px rgb(46 159 67 / 0.28);
+}
+
+.stats-box i {
+    font-size: 42px;
+    opacity: 0.9;
+}
+
+.stats-box .details {
+    text-align: left;
+}
+
+.stats-box .label {
+    font-weight: 500;
+    font-size: 14px;
+    opacity: 0.88;
+}
+
+.red-banner {
+    background: #f8d7da;
+    color: #842029;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 18px 28px;
+    box-shadow: inset 0 0 10px rgb(255 0 0 / 0.12);
+}
+
+.issuances-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.issuance-tile {
+    background: #2e9f43;
+    color: #fff;
+    text-align: center;
+    padding: 22px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgb(46 159 67 / 0.30);
+}
+
+.issuance-tile i {
+    font-size: 50px;
+    opacity: 0.9;
+}
+
+.issuance-tile .count {
+    font-size: 25px;
+}
+
+.issuance-tile .label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.events {
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  width: 100%;
+}
+
+.right-column {
+  flex-grow: 1;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.timeline {
+  background: #f8f9f8;
+  padding: 16px 20px;
+  font-size: 14px;
+  height: 330px;
+  overflow-y: auto;
+  box-shadow: inset 0 2px 8px rgb(0 0 0 / 0.1);
+  line-height: 1.35;
+}
+
+.timeline p { margin-bottom: 14px; }
+.timeline strong { color:#2e9f43; font-weight:800; }
+.timeline em { opacity:0.75; font-weight:600; font-style:normal; }
+
+/* scrollbars */
+.timeline::-webkit-scrollbar { width: 6px; }
+.timeline::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 6px; }
+.timeline::-webkit-scrollbar-thumb { background: #2e9f43; border-radius: 6px; }
+
+.action-buttons {
+    display: flex;
+    gap: 19px;
+}
+.action-buttons button {
+    flex: 1;
+    height: 80px;
+    background: #2e9f43;
+    color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.action-buttons button i {
+    font-size: 22px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 32px;
+    font-weight: 900;
+    cursor: pointer;
+    color: white;
+
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 10000;
+    pointer-events: auto;
+}
+
+
+/* ---------- MOBILE RESPONSIVENESS ---------- */
+@media (max-width: 1150px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hamburger { display: block; }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .content { padding: 20px; }
+
+  .header-title {
+    font-size: 22px;
+    margin-top: 20px;
+    padding-left: 60px;
+  }
+
+  .header-logos img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  @media (max-width: 1100px) {
+    .top-info {
+        flex-direction: column;
+        gap: 25px;
     }
 
-    .sidebar-header h3 { 
-        font-size:14px; 
-        margin:0; 
-        font-weight:700; l
-        ine-height:1; 
+    .stats-boxes {
+        flex-direction: column;
     }
+}
 
-    .sidebar-header small { 
-        font-size:11px; 
-        opacity:0.95; 
-        display:block; 
+@media (max-width: 900px) {
+    .issuances-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
+}
 
-    .sidebar-menu { 
-        margin-top: 10px; 
-        display:flex; 
-        flex-direction:column; 
+@media (max-width: 600px) {
+    .issuances-grid {
+        grid-template-columns: 1fr;
     }
+}
 
-    .sidebar-menu a {
-      padding:12px 18px; 
-      color:#222; 
-      text-decoration:none; 
-      border-bottom:1px solid #f0f0f0;
-      display:flex; 
-      gap:12px; 
-      align-items:center; 
-      font-size:14px;
-    }
+@media (max-width: 650px) {
 
-    .sidebar-menu a.active { 
-        background:#f0f6f1; 
-        font-weight:700; 
-        color:#12581f; 
-    }
-
-    .sidebar-bottom { 
-        margin-top:auto; 
-        padding:12px 18px; 
-        border-top:1px solid #f0f0f0; 
-        display:flex; 
-        gap:8px; 
-        align-items:center; 
-    }
-
-    .sidebar-bottom button { 
-        border:none; 
-        background:none; 
-        color:#222; 
-        cursor:pointer; 
-        padding:8px 12px; 
-        border-radius:6px; 
-    }
-
-    .sidebar-bottom 
-    .small-text { 
-        font-size:12px; 
-        color:#666; 
-    }
-
-    .main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
+    .hamburger {
+        display: block;
     }
 
     .header {
-      height: 100px;
-      background-image: url('../assets/img/barangay-gusa.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 28px;
-      position: relative;
-    }
-
-    .header-title {
-      color: #fff;
-      font-weight: 800;
-      font-size: 36px;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.55);
-      letter-spacing: 1px;
-      margin-left: 0px;
-      margin-top: 50px;
-    }
-
-    .header-title 
-    .green { 
-        color: #2E9F43; 
-    }
-
-    .header-logos { 
-        display:flex; 
-        gap:12px; align-items:center; 
-    }
-
-    .header-logos img { 
-        width:64px; 
-        height:64px; 
-        object-fit:contain; 
-    }
-
-    .content {
-        padding: 40px;
-        width: 100%;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: 350px auto;
-        gap: 20px;
-    }
-
-    .card {
-        background: white;
-        border-radius: 25px;
-        padding: 20px;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
         position: relative;
     }
 
-    .card p {
-        font-size: 12px;
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px; /* hidden by default */
+        height: 100vh;
+        z-index: 9999;
+        transition: left 0.3s ease;
     }
 
-    .profile-pic {
-        width: 160px;
-        height: 200px;
-        border-radius: 6px;
-        object-fit: cover;
+    .sidebar.active {
+        left: 0; /* toggle show */
     }
+    
 
-    .update-btn {
-        background: #2e8b57;
-        border: none;
-        color: white;
-        padding: 5px 15px;
-        border-radius: 6px;
-        cursor: pointer;
-        position: absolute;
-        bottom: 20px;
-        right: 25px;
+    .content {
+        margin-left: 0 !important;
     }
+}
 
-    .calendar-container {
-        background: white;
-        padding: 20px;
-        border-radius: 25px;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        width: 90%;
-        margin-left: 60px;
-    }
-
-    .calendar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 25px;
-    }
-
-    .calendar-header button {
-        background: #2E9F43;
-        color: white;
-        border: none;
-        width: 25px;
-        height: 25px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .calendar-grid {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 5px;
-    }
-
-    .calendar-day {
-        background: #efefef;
-        padding: 5px 0;
-        border-radius: 8px;
-        text-align: center;
-        font-weight: bold;
-        color: #444;
-    }
-
-    .weekdays div {
-        font-weight: bold;
-        color: #2E9F43;
-        text-align: center;
-        padding: 5px 0;
-    }
-
-    .today {
-        background: #c1f2c7 !important;
-        border: 2px solid #2E9F43;
-    }
-
-    .event {
-        background: #ffd9b3 !important;
-        border: 2px solid #ff9900;
-    }
-
-    .events {
-        margin-top: 20px;
-        padding: 20px;
-        background: white;
-        border-radius: 25px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        width: 90%;
-        margin-left: 60px;
-    }
+}
