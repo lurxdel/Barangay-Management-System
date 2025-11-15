@@ -1,3 +1,4 @@
+Try AI directly in your favorite apps … Use Gemini to generate drafts and refine content, plus get Gemini Pro with access to Google's next-gen AI for ₱1,100 ₱0 for 1 month
 /* Styling Sheet for the Front Page */
 
 body {
@@ -279,6 +280,96 @@ body {
   background: #ffe8cc;
   border: 1px solid #ff8800;
 }
+
+/* Navigation Buttons */
+.nav-btn {
+    background: #3cbf3c;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calendar-grid div {
+    background: #e7e7e7;
+    padding: 14px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+.calendar-grid .highlight {
+    background: #d9e5d9;
+}
+
+
+.calendar-grid .selected {
+    background: #3cbf3c;
+    color: white;
+}
+
+.timeline-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+
+.timeline-list::before {
+    content: none;
+}
+
+
+.timeline-list li {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+
+.timeline-list li::before {
+    content: "";
+    position: absolute;
+    left: -18px;     
+    top: 0;
+    width: 6px;
+    height: 75px;     
+    background: #3cbf4c;
+    border-radius: 2px;
+}
+
+
+.timeline-list li strong {
+    display: inline;
+    font-size: 18.5px;
+    font-weight: 500;
+    color: #000;
+}
+
+
+.timeline-list li small {
+    display: inline;
+    margin-top: 2px;
+    font-size: 14px;
+    color: #3cbf3c;
+    font-weight: 400;
+}
+
+
 
 /* Footer */
 footer {

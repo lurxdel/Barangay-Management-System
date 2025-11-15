@@ -16,33 +16,41 @@ document.addEventListener("DOMContentLoaded", () => {
       "July", "August", "September", "October", "November", "December"
     ];
 
+    const weekdayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
     monthYear.textContent = `${monthNames[month]} ${year}`;
+
+    weekdayNames.forEach(day => {
+      let w = document.createElement("div");
+      w.textContent = day;
+      w.style.fontWeight = "bold";
+      w.style.textAlign = "center";
+      calendarGrid.appendChild(w);
+    });
 
     let firstDay = new Date(year, month).getDay();
     let daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    // Add empty slots before the first day
     for (let i = 0; i < firstDay; i++) {
-      let emptyDiv = document.createElement("div");
-      calendarGrid.appendChild(emptyDiv);
+      let blank = document.createElement("div");
+      blank.classList.add("calendar-day");
+      blank.style.visibility = "hidden";
+      calendarGrid.appendChild(blank);
     }
 
-    // Add days
     for (let day = 1; day <= daysInMonth; day++) {
       let dayDiv = document.createElement("div");
       dayDiv.classList.add("calendar-day");
       dayDiv.textContent = day;
 
-      // Highlight today
       if (
         day === today.getDate() &&
         month === today.getMonth() &&
         year === today.getFullYear()
       ) {
-        dayDiv.classList.add("today");
+        dayDiv.classList.add("active");
       }
 
-      // Example: Add event marker (hardcoded for now)
       if (day === 15) {
         dayDiv.classList.add("event");
         dayDiv.title = "Barangay Assembly";

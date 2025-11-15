@@ -2,7 +2,6 @@
 session_start(); 
 require_once 'config.php'; 
 
-// ...existing code...
 
 // Retrieve and sanitize form data
 $email = trim($_POST['email'] ?? '');
@@ -45,9 +44,7 @@ if (!password_verify($password, $stored)) {
     exit();
 }
 
-// Enforce form-specific role rules:
-// - If resident form (no role posted), prevent Barangay Staff from logging in here.
-// - If a role is posted (admin form), require the user's role to match.
+// Check role
 $userRole = isset($user['role']) ? $user['role'] : 'Resident';
 
 if ($isResidentForm) {
@@ -72,7 +69,7 @@ $_SESSION['role'] = $userRole;
 if ($userRole === 'Barangay Staff') {
     header("Location: ../pages/admin/admin_dashboard.php");
 } else {
-    header("Location: ../user_dashboard.php");
+    header("Location: ../pages/user/user_dashboard.php");
 }
 exit();
 
