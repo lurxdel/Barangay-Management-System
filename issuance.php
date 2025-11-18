@@ -23,7 +23,7 @@
     <div class="container" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom:50px; margin-top: 50px">
         
         <!-- Card 1 -->
-        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:20px; background:#fff;">
+        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding: 33px; background:#fff;">
             <img src="assets/img/clearance.png" alt="Barangay Clearance">
             <h5>Barangay Clearance</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
@@ -32,7 +32,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:20px; background:#fff;">
+        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:31px; background:#fff;">
             <img src="assets/img/indigency.png" alt="Certificate of Indigency">
             <h5>Certificate of Indigency</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
@@ -41,7 +41,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:20px; background:#fff;">
+        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:29px; background:#fff;">
             <img src="assets/img/residency.png" alt="Certificate of Residency">
             <h5>Certificate of Residency</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:20px; background:#fff;">
+        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:29px; background:#fff;">
             <img src="assets/img/business.png" alt="Business Clearance">
             <h5>Barangay Business Clearance</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
