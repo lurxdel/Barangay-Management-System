@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admin Access</title>
+  <title>Resident Login</title>
   <link rel="stylesheet" href="css/login.css">
   <link rel="icon" type="image/png" href="assets/img/BMS.png">
 </head>

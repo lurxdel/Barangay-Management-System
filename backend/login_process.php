@@ -69,7 +69,7 @@ $_SESSION['role'] = $userRole;
 if ($userRole === 'Barangay Staff') {
     header("Location: ../pages/admin/admin_dashboard.php");
 } else {
-    header("Location: ../pages/user/user_dashboard.php");
+    header("Location: ../pages/resident/resident_dashboard.php");
 }
 exit();
 

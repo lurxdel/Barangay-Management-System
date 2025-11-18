@@ -31,14 +31,13 @@ if (!isset($_SESSION['email'])) {
     </div>
 
     <div class="sidebar-menu">
-        <a href="#" class="active"><i class="bi bi-house-door"></i> Dashboard</a>
-        <a href="#"><i class="bi bi-newspaper"></i> Request Service</a>
+        <a href="resident_dashboard.php" class="active"><i class="bi bi-house-door"></i> Dashboard</a>
+        <a href="resident_rqs_service.php"><i class="bi bi-newspaper"></i> Request Service</a>
         <a href="#"><i class="bi bi-arrow-down-left"></i> Return to Homepage</a>
     </div>
 
-    <div class="sidebar-bottom">
-      <div><button title="Logout"><i class="bi bi-arrow-left"></i></button></div>
-      <div class="medium-text">Logout</div>
+    <Logout class="sidebar-bottom">
+      <a href="../../user_login.php"><i class="bi bi-arrow-left"></i>Logout</a>
     </div>
 </div>
 
@@ -46,7 +45,7 @@ if (!isset($_SESSION['email'])) {
 
     <div class="header">
         <div class="hamburger" onclick="toggleSidebar()">☰</div>
-        <h1 class="header-title">RESIDENT <span class="green">DASHBOARD</span></h1>
+        <h1 class="header-title">REQUEST <span class="green">SERVICE</span></h1>
 
         <div class="header-logos">
             <img src="../../assets/img/barangaygusalogo.png">
@@ -79,16 +78,6 @@ if (!isset($_SESSION['email'])) {
                         <button id="prev-month">&lt;</button>
                         <h2 id="month-year"></h2>
                         <button id="next-month">&gt;</button>
-                    </div>
-
-                    <div class="weekdays calendar-grid">
-                        <div>Sun</div>
-                        <div>Mon</div>
-                        <div>Tue</div>
-                        <div>Wed</div>
-                        <div>Thu</div>
-                        <div>Fri</div>
-                        <div>Sat</div>
                     </div>
 
                     <div class="calendar-grid" id="calendar-grid"></div>

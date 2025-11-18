@@ -31,12 +31,12 @@ if (!isset($_SESSION['email'])) {
     </div>
 
     <div class="sidebar-menu">
-        <a href="#" class="active"><i class="bi bi-house-door"></i> Dashboard</a>
-        <a href="#"><i class="bi bi-megaphone"></i> Announcement</a>
-        <a href="#"><i class="bi bi-people"></i> Officials</a>
-        <a href="#"><i class="bi bi-bookmark"></i> Issuance</a>
-        <a href="#"><i class="bi bi-file-earmark-text"></i> Records</a>
-        <a href="#"><i class="bi bi-box-arrow-left"></i> Logout</a>
+        <a href="admin_dashboard.php" class="active"><i class="bi bi-house-door"></i> Dashboard</a>
+        <a href="admin_announcement.php"><i class="bi bi-megaphone"></i> Announcement</a>
+        <a href="admin_officials.php"><i class="bi bi-people"></i> Officials</a>
+        <a href="admin_issuance.php"><i class="bi bi-bookmark"></i> Issuance</a>
+        <a href="admin_rec_residents.php"><i class="bi bi-file-earmark-text"></i> Records</a>
+        <a href="../../admin_login.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
     </div>
 </div>
 

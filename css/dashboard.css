@@ -61,6 +61,17 @@ body { background: #f3f6f5; min-height: 100vh; display: flex; }
   align-items:center;
 }
 
+.sidebar-bottom a {
+  color:#222;
+  text-decoration:none;
+  border-bottom:1px solid #f0f0f0;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:14px;
+  padding-left: 10px;
+}
+
 .sidebar-bottom button {
   border:none;
   background:none;
@@ -70,7 +81,7 @@ body { background: #f3f6f5; min-height: 100vh; display: flex; }
   border-radius:6px;
 }
 
-.sidebar-bottom .small-text { font-size:12px; color:#666; }
+.sidebar-bottom .small-text { font-size:12px; color:#666;}
 
 /* ---------- HAMBURGER MENU (MOBILE) ---------- */
 .hamburger {
