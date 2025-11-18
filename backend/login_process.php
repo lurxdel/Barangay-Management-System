@@ -49,7 +49,7 @@ $userRole = isset($user['role']) ? $user['role'] : 'Resident';
 
 if ($isResidentForm) {
     if ($userRole === 'Barangay Staff') {
-        echo "<script>alert('Invalid role for this login form. Use Administrator Login.'); window.location.href='../user_login.php';</script>";
+        echo "<script>alert('Invalid role for this login form. Use Administrator Login.'); window.location.href='../resident_login.php';</script>";
         exit();
     }
 } else {

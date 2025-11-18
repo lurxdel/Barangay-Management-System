@@ -37,7 +37,7 @@ if (!isset($_SESSION['email'])) {
     </div>
 
     <Logout class="sidebar-bottom">
-      <a href="../../user_login.php"><i class="bi bi-arrow-left"></i>Logout</a>
+      <a href="../../resident_login.php"><i class="bi bi-arrow-left"></i>Logout</a>
     </div>
 </div>
 

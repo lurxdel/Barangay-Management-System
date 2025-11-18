@@ -21,7 +21,7 @@
       <input type="hidden" name="role" value="Barangay Staff">
 
       <label><input type="checkbox" name="remember"> Remember me</label>
-      <a href="user_login.php" class="alt-login">Resident Login</a>
+      <a href="resident_login.php" class="alt-login">Resident Login</a>
 
       <button type="submit">Login</button>
     </form>

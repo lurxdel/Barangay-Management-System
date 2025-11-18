@@ -80,7 +80,7 @@
       <button type="submit">REGISTER NOW</button>
     </form>
     <p style="text-align:center; margin-top:20px;">
-      <a href="user_login.php">Back to Login</a>
+      <a href="resident_login.php">Back to Login</a>
     </p>
   </section>
 

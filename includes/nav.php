@@ -18,7 +18,7 @@
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="logout.php" class="btn btn-success ms-3">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
                 <?php else: ?>
-                    <li><a href="user_login.php" class="btn btn-success ms-3">Login</a></li>
+                    <li><a href="resident_login.php" class="btn btn-success ms-3">Login</a></li>
                 <?php endif; ?>
             </ul>
         </div>
