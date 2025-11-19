@@ -13,13 +13,13 @@
 <?php include 'includes/nav.php'; ?>
 
 <!-- Hero Section -->
-<section class="hero" style="display: flex; align-items: center; justify-content: center;">
+<section class="hero">
     <h5>WELCOME TO</h5>
     <h1 class="fw-bold">BARANGAY <span class="text-success">GUSA</span></h1>
     <p>Gusa, Cagayan de Oro City</p>
     <div class="mt-3">
         <a href="contact.php" class="btn btn-light me-2">Contact Us</a>
-        <a href="resident_login.php" class="btn btn-success">Login Now</a>
+        <a href="user_login.php" class="btn btn-success">Login Now</a>
     </div>
 </section>
 

@@ -14,8 +14,8 @@
 
     <section class="header-banner" style="display: flex; align-items: center; justify-content: center;">
         <div class="overlay" style="display: flex; align-items: center; gap: 20px;">
-        <h1>Barangay</h1> 
-        <h3>Officials</h3>
+            <h1>Barangay</h1> 
+            <h3>Officials</h3>
         </div>
     </section>
 
@@ -27,7 +27,7 @@
                     <div class="card announcement-card p-3">
                         <img src="assets/img/announcement1.jpg" class="mb-3 w-100" />
                         <div>
-                            <h6 class="mt-2">Barangay Staff</h6>
+                            <h6 class="mt-2">Barangay Captain</h6>
                             <p>Lorem Ipsum is simply dummy text of the printing...</p>
                         </div>
                     </div>

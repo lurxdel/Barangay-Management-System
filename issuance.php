@@ -13,49 +13,49 @@
 <?php include 'includes/nav.php'; ?>
 
   <section class="header-banner" style="display: flex; align-items: center; justify-content: center;">
-      <div class="overlay" style="display: flex; align-items: center; gap: 20px;">
-      <h1>Barangay</h1> 
-      <h3>Issuance</h3>
-    </div>
-  </section>
+        <div class="overlay" style="display: flex; align-items: center; gap: 20px;">
+            <h1>Barangay</h1> 
+            <h3>Issuance</h3>
+        </div>
+    </section>
 
 <!-- Issuance Cards -->
     <div class="container" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom:50px; margin-top: 50px">
         
         <!-- Card 1 -->
-        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding: 33px; background:#fff;">
+        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:20px; background:#fff;">
             <img src="assets/img/clearance.png" alt="Barangay Clearance">
             <h5>Barangay Clearance</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
             <p><strong>Price: ₱50</strong></p>
-            <a href="resident_login.php" class="btn btn-success">Request Now</a>
+            <a href="user_login.php" class="btn btn-success">Request Now</a>
         </div>
 
         <!-- Card 2 -->
-        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:31px; background:#fff;">
+        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:20px; background:#fff;">
             <img src="assets/img/indigency.png" alt="Certificate of Indigency">
             <h5>Certificate of Indigency</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
             <p><strong>Price: ₱50</strong></p>
-            <a href="resident_login.php" class="btn btn-success">Request Now</a>
+            <a href="user_login.php" class="btn btn-success">Request Now</a>
         </div>
 
         <!-- Card 3 -->
-        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:29px; background:#fff;">
+        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:20px; background:#fff;">
             <img src="assets/img/residency.png" alt="Certificate of Residency">
             <h5>Certificate of Residency</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
             <p><strong>Price: ₱50</strong></p>
-            <a href="resident_login.php" class="btn btn-success">Request Now</a>
+            <a href="user_login.php" class="btn btn-success">Request Now</a>
         </div>
 
         <!-- Card 4 -->
-        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:29px; background:#fff;">
+        <div class="card-custom announcement-card" style="width:250px; text-align:center; padding:20px; background:#fff;">
             <img src="assets/img/business.png" alt="Business Clearance">
             <h5>Barangay Business Clearance</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
             <p><strong>Price: ₱50</strong></p>
-            <a href="resident_login.php" class="btn btn-success">Request Now</a>
+            <a href="user_login.php" class="btn btn-success">Request Now</a>
         </div>
     </div>
 
