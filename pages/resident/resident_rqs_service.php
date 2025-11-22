@@ -29,7 +29,7 @@
     </div>
 
     <Logout class="sidebar-bottom">
-      <a href="../../resident_login.php"><i class="bi bi-arrow-left"></i>Logout</a>
+      <a href="../../backend/logout.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
     </div>
 </div>
 

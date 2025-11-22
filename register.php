@@ -43,7 +43,8 @@
 
       <div class="form-row">
         <input type="text" name="occupation" placeholder="Occupation">
-        <select name="voter_status" required>
+        <select name="voter" required>
+          <option value="">Active Voter</option>
           <option value="Yes">Yes</option>
           <option value="No">No</option>
         </select>
@@ -58,6 +59,7 @@
 
       <div class="form-row">
         <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="contact" placeholder="Contact Number" required>
         <input type="password" name="password" placeholder="Password" required>
       </div>
 

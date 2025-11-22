@@ -1,10 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['email'])) {
-    header("Location: login.php");
-    exit();
-}
-?>
+<?php require_once '../../backend/auth_resident.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +31,7 @@ if (!isset($_SESSION['email'])) {
     </div>
 
     <Logout class="sidebar-bottom">
-      <a href="../../resident_login.php"><i class="bi bi-arrow-left"></i>Logout</a>
+      <a href="../../backend/logout.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
     </div>
 </div>
 

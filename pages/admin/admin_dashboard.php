@@ -1,10 +1,5 @@
-<?php
-session_start();
-if (!isset($_SESSION['email'])) {
-    header("Location: login.php");
-    exit();
-}
-?>
+<?php require_once '../../backend/auth_admin.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +44,7 @@ if (!isset($_SESSION['email'])) {
           </div>
       </div>
 
-      <a href="../../admin_login.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
+      <a href="../../backend/logout.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
   </div>
 
 </div>

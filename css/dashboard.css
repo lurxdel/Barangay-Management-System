@@ -2,7 +2,6 @@
 body, html { overflow-x: hidden;}
 body { background: #f3f6f5; min-height: 100vh; display: flex; }
 
-/* ---------- SIDEBAR (DESKTOP) ---------- */
 .sidebar {
   width: 260px;
   background: #ffffff;

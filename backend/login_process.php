@@ -65,6 +65,11 @@ session_regenerate_id(true);
 $_SESSION['email'] = $user['email'];
 $_SESSION['role'] = $userRole;
 
+if ($userRole === 'Resident' && $user['status'] === 'Pending') {
+    echo "<script>alert('Account not yet approved. Please wait for admin approval.'); window.history.back();</script>";
+    exit();
+}
+
 // Redirect based on role
 if ($userRole === 'Barangay Staff') {
     header("Location: ../pages/admin/admin_dashboard.php");

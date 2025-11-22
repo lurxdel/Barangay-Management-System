@@ -7,7 +7,11 @@ try {
 
     // Select your database and collection
     $database = $client->bms_db;
+
     $usersCollection = $database->users;
+    $residentsCollection = $database->residents;
+    $officialsCollection = $database->officials;
+
 
 } catch (Exception $e) {
     die("Error connecting to MongoDB: " . $e->getMessage());
