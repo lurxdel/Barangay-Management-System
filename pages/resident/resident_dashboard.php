@@ -33,7 +33,7 @@ if (!isset($_SESSION['email'])) {
     <div class="sidebar-menu">
         <a href="resident_dashboard.php" class="active"><i class="bi bi-house-door"></i> Dashboard</a>
         <a href="resident_rqs_service.php"><i class="bi bi-newspaper"></i> Request Service</a>
-        <a href="#"><i class="bi bi-arrow-down-left"></i> Return to Homepage</a>
+        <a href="../../index.php"><i class="bi bi-arrow-down-left"></i> Return to Homepage</a>
     </div>
 
     <Logout class="sidebar-bottom">
@@ -45,7 +45,7 @@ if (!isset($_SESSION['email'])) {
 
     <div class="header">
         <div class="hamburger" onclick="toggleSidebar()">☰</div>
-        <h1 class="header-title">REQUEST <span class="green">SERVICE</span></h1>
+        <h1 class="header-title">RESIDENT <span class="green">DASHBOARD</span></h1>
 
         <div class="header-logos">
             <img src="../../assets/img/barangaygusalogo.png">

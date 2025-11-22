@@ -31,13 +31,27 @@ if (!isset($_SESSION['email'])) {
     </div>
 
     <div class="sidebar-menu">
-        <a href="admin_dashboard.php" class="active"><i class="bi bi-house-door"></i> Dashboard</a>
-        <a href="admin_announcement.php"><i class="bi bi-megaphone"></i> Announcement</a>
-        <a href="admin_officials.php"><i class="bi bi-people"></i> Officials</a>
-        <a href="admin_issuance.php"><i class="bi bi-bookmark"></i> Issuance</a>
-        <a href="admin_rec_residents.php"><i class="bi bi-file-earmark-text"></i> Records</a>
-        <a href="../../admin_login.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
-    </div>
+      <a href="admin_dashboard.php" class="active"><i class="bi bi-house-door"></i> Dashboard</a>
+      <a href="admin_announcement.php"><i class="bi bi-megaphone"></i> Announcement</a>
+      <a href="admin_officials.php"><i class="bi bi-people"></i> Officials</a>
+      <a href="admin_issuance.php"><i class="bi bi-bookmark"></i> Issuance</a>
+
+      <!-- Dropdown Menu -->
+      <div class="dropdown-container">
+          <button class="dropdown-btn">
+              <i class="bi bi-file-earmark-text"></i> Records
+              <i class="bi bi-caret-down-fill dropdown-arrow"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="admin_rec_residents.php">Residents</a>
+              <a href="admin_rec_complaints.php">Complaints</a>
+              <a href="admin_rec_blotter.php">Blotter</a>
+          </div>
+      </div>
+
+      <a href="../../admin_login.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
+  </div>
+
 </div>
 
 <div style="width:100%">
@@ -242,7 +256,11 @@ if (!isset($_SESSION['email'])) {
 function toggleSidebar() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
+document.querySelectorAll('.dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.parentElement.classList.toggle('active');
+    });
+});
 </script>
-
 </body>
 </html>

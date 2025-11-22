@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BMS - Resident Service</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMS - Request Service</title>
     <link rel="icon" type="image/png" href="../../assets/img/BMS.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -24,13 +24,12 @@
 
     <div class="sidebar-menu">
         <a href="resident_dashboard.php"><i class="bi bi-house-door"></i> Dashboard</a>
-        <a href="resident_rqs_service.php" class="active"><i class="bi bi-newspaper"></i> Request Service</a>
-        <a href="#"><i class="bi bi-arrow-down-left"></i> Return to Homepage</a>
+        <a href="resident_rqs_service.php"class="active"><i class="bi bi-newspaper"></i> Request Service</a>
+        <a href="../../index.php"><i class="bi bi-arrow-down-left"></i> Return to Homepage</a>
     </div>
 
-    <div class="sidebar-bottom">
-      <div><button title="Logout"><i class="bi bi-arrow-left"></i></button></div>
-      <div class="medium-text">Logout</div>
+    <Logout class="sidebar-bottom">
+      <a href="../../resident_login.php"><i class="bi bi-arrow-left"></i>Logout</a>
     </div>
 </div>
 
@@ -38,7 +37,7 @@
 
     <div class="header">
         <div class="hamburger" onclick="toggleSidebar()">☰</div>
-        <h1 class="header-title">RESIDENT <span class="green">DASHBOARD</span></h1>
+        <h1 class="header-title">REQUEST <span class="green">SERVICE</span></h1>
 
         <div class="header-logos">
             <img src="../../assets/img/barangaygusalogo.png">
@@ -46,10 +45,45 @@
         </div>
     </div>
 
-    <div class="content">
-        
+<div class="content">
+
+    <div class="search-box">
+        <input type="text" placeholder="Search for Document Type...">
+        <button><i class="bi bi-search"></i></button>
     </div>
 
+    <!-- TABLE -->
+    <table>
+        <tr>
+            <th>Document Type</th>
+            <th>Request Date</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>Barangay Clearance</td>
+            <td>08/02/2025</td>
+            <td><span class="status pending">Pending</span></td>
+        </tr>
+
+        <tr>
+            <td>Certificate of Indigency</td>
+            <td>08/02/2025</td>
+            <td><span class="status ready">Ready to Pick Up</span></td>
+        </tr>
+
+        <tr>
+            <td>Certificate of Residency</td>
+            <td>08/04/2025</td>
+            <td><span class="status decline">Decline</span></td>
+        </tr>
+
+        <tr>
+            <td>Certificate of Residency</td>
+            <td>08/06/2025</td>
+            <td><span class="status ready">Ready to Pick Up</span></td>
+        </tr>
+    </table>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -57,6 +91,5 @@ function toggleSidebar() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
 </script>
-
 </body>
 </html>

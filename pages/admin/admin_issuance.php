@@ -28,7 +28,18 @@
         <a href="admin_announcement.php"><i class="bi bi-megaphone"></i> Announcement</a>
         <a href="admin_officials.php"><i class="bi bi-people"></i> Officials</a>
         <a href="admin_issuance.php" class="active"><i class="bi bi-bookmark"></i> Issuance</a>
-        <a href="admin_rec_residents.php"><i class="bi bi-file-earmark-text"></i> Records</a>
+
+        <div class="dropdown-container">
+          <button class="dropdown-btn">
+              <i class="bi bi-file-earmark-text"></i> Records
+              <i class="bi bi-caret-down-fill dropdown-arrow"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="admin_rec_residents.php">Residents</a>
+              <a href="admin_rec_complaints.php">Complaints</a>
+              <a href="admin_rec_blotter.php">Blotter</a>
+          </div>
+      </div>
         <a href="../../admin_login.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
     </div>
 </div>
@@ -46,7 +57,69 @@
     </div>
 
     <div class="content">
-        
+        <div class="search-box">
+        <input type="text" placeholder="Search for Document Type...">
+        <button><i class="bi bi-search"></i></button>
+    </div>
+
+    <!-- TABLE -->
+    <table>
+        <tr>
+            <th>Resident Name</th>
+            <th>Document Type</th>
+            <th>Request Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>Resident 1</td>
+            <td>Barangay Clearance</td>
+            <td>08/02/2025</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>
+                <button class="btn btn-sm btn-info me-1 text-white"><i class="bi bi-eye"></i></button>
+                <button class="btn btn-sm btn-primary me-1"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Resident 2</td>
+            <td>Certificate of Indigency</td>
+            <td>08/02/2025</td>
+            <td><span class="status ready">Ready to Pick Up</span></td>
+            <td>
+                <button class="btn btn-sm btn-info me-1 text-white"><i class="bi bi-eye"></i></button>
+                <button class="btn btn-sm btn-primary me-1"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Resident 3</td>
+            <td>Certificate of Residency</td>
+            <td>08/04/2025</td>
+            <td><span class="status decline">Decline</span></td>
+            <td>
+                <button class="btn btn-sm btn-info me-1 text-white"><i class="bi bi-eye"></i></button>
+                <button class="btn btn-sm btn-primary me-1"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Resident 4</td>
+            <td>Certificate of Residency</td>
+            <td>08/06/2025</td>
+            <td><span class="status ready">Ready to Pick Up</span></td>
+            <td>
+                <button class="btn btn-sm btn-info me-1 text-white"><i class="bi bi-eye"></i></button>
+                <button class="btn btn-sm btn-primary me-1"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+    </table>
     </div>
 
 </div>
@@ -55,6 +128,11 @@
 function toggleSidebar() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
+document.querySelectorAll('.dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.parentElement.classList.toggle('active');
+    });
+});
 </script>
 
 </body>

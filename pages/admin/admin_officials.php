@@ -28,7 +28,18 @@
         <a href="admin_announcement.php"><i class="bi bi-megaphone"></i> Announcement</a>
         <a href="admin_officials.php" class="active"><i class="bi bi-people"></i> Officials</a>
         <a href="admin_issuance.php"><i class="bi bi-bookmark"></i> Issuance</a>
-        <a href="admin_rec_residents.php"><i class="bi bi-file-earmark-text"></i> Records</a>
+
+        <div class="dropdown-container">
+          <button class="dropdown-btn">
+              <i class="bi bi-file-earmark-text"></i> Records
+              <i class="bi bi-caret-down-fill dropdown-arrow"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="admin_rec_residents.php">Residents</a>
+              <a href="admin_rec_complaints.php">Complaints</a>
+              <a href="admin_rec_blotter.php">Blotter</a>
+          </div>
+      </div>
         <a href="../../admin_login.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
     </div>
 </div>
@@ -46,7 +57,61 @@
     </div>
 
     <div class="content">
-        
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" placeholder="Search for Document Type..." class="form-control">
+            <button><i class="bi bi-search"></i></button>
+        </div>
+
+        <!-- Buttons: Add New + Archive -->
+        <div class="mt-2 mt-md-0">
+            <button class="btn btn-primary me-2"><i class="bi bi-plus-circle"></i> Add New</button>
+            <button class="btn btn-secondary"><i class="bi bi-archive"></i> Archive</button>
+        </div>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Official Name</th>
+            <th>Position</th>
+            <th>In Service</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td><img src="../../assets/img/Harry.jpg" style="width: 140px; height: auto;"></td>
+            <td>Harry Zarate</td>
+            <td>Barangay Staff</td>
+            <td>2016 - Present</td>
+            <td>
+                <button class="btn btn-sm btn-primary me-1"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td><img src="../../assets/img/Faith.jpeg" style="width: 140px; height: auto;" /></td>
+            <td>Faith Love Traya</td>
+            <td>Barangay Staff</td>
+            <td>2016 - Present</td>
+            <td>
+                <button class="btn btn-sm btn-primary me-1"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td><img src="../../assets/img/Luredel.jpg" style="width: 140px; height: auto;" /></td>
+             <td>Luredel Dulangon</td>
+            <td>Barangay Staff</td>
+            <td>2016 - Present</td>
+            <td>
+                <button class="btn btn-sm btn-primary me-1"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+    </table>
     </div>
 
 </div>
@@ -55,6 +120,11 @@
 function toggleSidebar() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
+document.querySelectorAll('.dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.parentElement.classList.toggle('active');
+    });
+});
 </script>
 
 </body>

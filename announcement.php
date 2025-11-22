@@ -46,10 +46,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card announcement-card p-3">
-                        <img src="assets/img/announcement2.png" class="mb-3 w-100" />
+                        <img src="assets/img/announcement3.png" class="mb-3 w-100" />
                         <div>
                             <span class="badge bg-success">1 September</span>
-                            <h6 class="mt-2">Paskong Handog</h6>
+                            <h6 class="mt-2">Pamaskong Handog</h6>
                             <p>Lorem Ipsum is simply dummy text of the printing...</p>
                             <a href="#" class="text-success">See More</a>
                         </div>
